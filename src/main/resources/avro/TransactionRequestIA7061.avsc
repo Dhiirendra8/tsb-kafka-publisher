@@ -1,0 +1,24 @@
+{
+	"namespace": "com.tsb.ods.sys.api.schema",
+	"type": "record",
+	"name": "TransactionRequestIA7061",
+	"doc": "Avro schema for TransactionRequestIA7061",
+	"fields": [
+		{"name": "entidnper", "type": ["null","string"]}, 
+		{"name": "accion", "type": ["null","string"]},
+		{"name": "idmarca", "type": ["null","string"]},
+		{"name": "idpersona", "type": ["null","long"], "default": null},
+		{"name": "tipper", "type": ["null","string"]},
+		{"name": "elements", "type": {
+			"type": "array", "items": {
+				"name": "DocConfigOp",
+				"type": "record",
+				"fields": [
+					{"name": "application", "type": ["null","string"]},
+					{"name": "correspondence", "type": ["null","string"]},
+					{"name": "statements", "type": ["null","string"]}
+				]
+			}
+		}
+	}]
+}

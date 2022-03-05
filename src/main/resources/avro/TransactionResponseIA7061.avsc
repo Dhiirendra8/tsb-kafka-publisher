@@ -1,0 +1,49 @@
+{
+	"namespace": "com.tsb.ods.sys.api.schema",
+	"type": "record",
+	"name": "TransactionResponseIA7061",
+	"doc": "Avro schema for TransactionResponseIA7061",
+	"fields": [
+		{
+			"name": "numtotlei",
+			"type": ["null","long"],
+			"default": null
+		}, 
+		
+		{
+			"name": "numtotnolei",
+			"type": ["null","long"],
+			"default": null
+		},
+		
+		{
+			"name": "error",
+			"type": {
+				"name": "Error",
+				"type": "record",
+				"fields": [
+					{
+						"name": "code",
+						"type": "string",
+						"default": ""
+					},
+					{
+						"name": "message",
+						"type": "string",
+						"default": ""
+					},
+					{
+						"name": "description",
+						"type": "string",
+						"default": ""
+					},
+					{
+						"name": "reason",
+						"type": "string",
+						"default": ""
+					}
+				]
+			}
+		}
+	]
+}
